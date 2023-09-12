@@ -33,8 +33,3 @@ function appendItemsToEndorsements() {
     newList.innerHTML = itemValue
     endorsementListEl.append(newList)
 }
-// if (valueInput) {
-//     let newList = document.createElement("li")
-//     newList.textContent = valueInput
-//     endorsementList.append(newList)
-// }
