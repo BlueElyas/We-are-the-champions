@@ -73,3 +73,13 @@ ul {
     margin: 0;
     list-style-type: none;
 }
+
+li {
+    border: 1px solid white;
+    background: white;
+    font-family: 'Inter', sans-serif;
+    width: 280px;
+    flex-wrap: wrap;
+    padding: 10px;
+    font-size: 15px;
+}
