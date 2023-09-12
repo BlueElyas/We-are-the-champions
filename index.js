@@ -15,11 +15,12 @@ let endorsementListEl = document.getElementById("endorsement-list")
 
 endorsementBtn.addEventListener("click", function() {
     let inputValue = endorsmentInput.value 
-    if (inputValue.length > 0 || !inputValue.trim()) {
-        push(endorsementsInDB, inputValue)
+    if (inputValue.length == "") {
+        return false
+    }
+    push(endorsementsInDB, inputValue)
         appendItemsToEndorsements()
         clearInputValue()
-    }
 })
 
 function clearInputValue() {
