@@ -24,17 +24,7 @@ function clearInputValue() {
     endorsmentInput.value = ""
 }
 
-onValue(endorsementsInDB, function(snapshot) {
-    if (snapshot.exists()) {
-        let itemsArray = Objects.entries(snapshot.val())
-        for (let i = 0; i < itemsArray.length; i++) {
-            let currentItem = itemsArray[i]
-            appendItemsToEndorsements(currentItem)
-        }
-        }else {
-            endorsementListEl.innerHTML = "No reviews ...yet"
-    }
-} )
+
 
 function appendItemsToEndorsements(item) {
     let itemID = item[0]
