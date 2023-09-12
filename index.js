@@ -15,7 +15,7 @@ let endorsementListEl = document.getElementById("endorsement-list")
 
 endorsementBtn.addEventListener("click", function() {
     let inputValue = endorsmentInput.value 
-    if (inputValue.length == "" || inputValue.trim()) {
+    if (inputValue.length === "" || inputValue.trim()) {
         return false
     }
     push(endorsementsInDB, inputValue)
