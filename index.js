@@ -7,8 +7,8 @@ let realtimeDatabase = {
 }
 
 const app = initializeApp(realtimeDatabase)
-const database = getDatabase(app) 
-const endorsementsInDB = ref(database, "endorsements")
+const databaseEndorsmentForApp = getDatabase(app) 
+const endorsementsInDB = ref(databaseEndorsmentForApp, "endorsements")
 const endorsmentInput = document.getElementById("endorsement-element")
 const endorsementBtn = document.getElementById("push-for-endorsement")
 let endorsementListEl = document.getElementById("endorsement-list")
