@@ -40,7 +40,7 @@ function appendItemsToEndorsements(item) {
     let itemID = item[0]
     let itemValue = item[1]
     
-    let newList = document.createElement("li")
+    let newList = `<li class = "list-items">${itemValue}</li> `
     newList.textContent = itemValue
     endorsementList.append(newList)
 }

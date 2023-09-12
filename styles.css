@@ -14,8 +14,7 @@ body {
     align-items: center;
     justify-content: center;
     row-gap: 10px;
-    display: flex;
-    flex-wrap: wrap;
+    
 }
 
 img {
@@ -45,11 +44,10 @@ textarea {
     color: #8F8F8F;
     font-size: 15px;
     border: none;
-    width: 54%;
     resize: none;
     overflow: hidden;
     padding: 12px 15px 30px 15px;
-
+    width: 270px;
 }
 
 input::placeholder {
