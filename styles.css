@@ -43,12 +43,12 @@ textarea {
     background: #444059;
     border-radius: 8px;
     color: #8F8F8F;
-    text-indent: 15px; 
-    padding: 12px 0 30px 0;
     font-size: 15px;
     border: none;
-    width: 300px;
+    width: 54%;
     resize: none;
+    overflow: hidden;
+    padding: 12px 15px 30px 15px;
 
 }
 
