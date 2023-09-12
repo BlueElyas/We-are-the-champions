@@ -15,19 +15,17 @@ let endorsementListEl = document.getElementById("endorsement-list")
 
 endorsementBtn.addEventListener("click", function() {
     let inputValue = endorsmentInput.value 
-    if (inputValue.length === "" || inputValue.trim()) {
-        return false
+    if (inputValue || inputValue.trim()) {
+        push(endorsementsInDB, inputValue)
+        appendItemsToEndorsements()
+        clearInputValue()
     }
-    push(endorsementsInDB, inputValue)
-    appendItemsToEndorsements()
-    clearInputValue()
-    
 })
 
-onValue(endorsementsInDB, function(snapshot) {
-    const data = snapshot.val()
-    endorsementsInDB(postElement, data)
-})
+// onValue(endorsementsInDB, function(snapshot) {
+//     const data = snapshot.val()
+//     endorsementsInDB(postElement, data)
+// })
 
 
 
