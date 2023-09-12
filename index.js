@@ -21,7 +21,7 @@ endorsementBtn.addEventListener("click", function() {
 })
 
 function clearInputValue() {
-    endorsmentInput.innerHTML = ""
+    endorsmentInput.textContent = ""
 }
 
 onValue(endorsementsInDB, function(snapshot) {
