@@ -16,9 +16,8 @@ let endorsementListEl = document.getElementById("endorsement-list")
 endorsementBtn.addEventListener("click", function() {
     let inputValue = endorsmentInput.value 
     push(endorsementsInDB, inputValue)
-    clearInputValue()
     appendItemsToEndorsements()
-
+    clearInputValue()
 })
 
 function clearInputValue() {
