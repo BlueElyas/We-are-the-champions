@@ -1,5 +1,5 @@
-import { initializeApp } from "/node_modules/firebase/app"
-import { getDatabase, ref, push, onValue, remove } from "/node_modules/firebase/database>"
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js"
+import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js"
 
 let realtimeDatabase = {
     databseURL: "https://we-are-the-champions-54d9e-default-rtdb.europe-west1.firebasedatabase.app/"
