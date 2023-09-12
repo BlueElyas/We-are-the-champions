@@ -28,7 +28,7 @@ function appendItemsToEndorsements() {
     let itemValue = endorsmentInput.value
     let newList = itemValue
     newList.innerHTML = document.createElement("li")
-    endorsementListEl.innerHTML = newList
+    endorsementListEl.textContent = newList
 }
 // `<li>${itemValue}</li>`
 // if (valueInput) {
