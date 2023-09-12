@@ -26,11 +26,11 @@ function clearInputValue() {
 
 function appendItemsToEndorsements() {
     let itemValue = endorsmentInput.value
-    let newList = itemValue
-    newList.innerHTML = document.createElement("li")
-    endorsementListEl.textContent = newList
+    let newList = document.createElement("li")
+    newList.innerHTML = itemValue
+    endorsementListEl.append(newList)
 }
-// `<li>${itemValue}</li>`
+
 // if (valueInput) {
 //     let newList = document.createElement("li")
 //     newList.textContent = valueInput

@@ -67,6 +67,7 @@ button {
 
 button:hover {
     background: red;
+    cursor: pointer;
 }
 
 ul {
