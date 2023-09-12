@@ -1,6 +1,6 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js"
+import { initializeApp } from "firebase/app"
 import { getDatabase, ref, push, onValue, remove } from 
-"https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+"firebase/firestore/<service>"
 
 let realtimeDatabase = {
     databseURL: "https://we-are-the-champions-54d9e-default-rtdb.europe-west1.firebasedatabase.app/"
