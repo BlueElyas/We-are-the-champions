@@ -17,6 +17,7 @@ endorsementBtn.addEventListener("click", function() {
     let inputValue = endorsmentInput.value 
     push(endorsementsInDB, inputValue)
     appendItemsToEndorsements()
+    localStorage.setItem("Endorse Key", inputValue)
     clearInputValue()
 })
 
@@ -26,7 +27,7 @@ function clearInputValue() {
 
 function appendItemsToEndorsements() {
     let itemValue = endorsmentInput.value
-    let newList = document.createElement("li")
+    let newList = document.createElement("li", "br")
     newList.innerHTML = itemValue
     endorsementListEl.append(newList)
 }
