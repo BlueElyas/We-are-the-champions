@@ -80,7 +80,7 @@ li {
     border: 1px solid white;
     background: white;
     font-family: 'Inter', sans-serif;
-    max-width: 280px;
+    width: 280px;
     flex-wrap: nowrap;
     padding: 10px;
     font-size: 15px;
