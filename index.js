@@ -21,10 +21,12 @@ endorsementBtn.addEventListener("click", function() {
     push(endorsementsInDB, inputValue)
     appendItemsToEndorsements()
     clearInputValue()
-    onValue(endorsementsInDB, function(snapshot) {
-        const data = snapshot.val()
-        endorsementsInDB(postElement, data)
-    })
+    
+})
+
+onValue(endorsementsInDB, function(snapshot) {
+    const data = snapshot.val()
+    endorsementsInDB(postElement, data)
 })
 
 
