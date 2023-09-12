@@ -81,7 +81,7 @@ li {
     background: white;
     font-family: 'Inter', sans-serif;
     max-width: 280px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 10px;
     font-size: 15px;
     margin-bottom: 10px;
