@@ -16,7 +16,10 @@ let endorsementListEl = document.getElementById("endorsement-list")
 endorsementBtn.addEventListener("click", function() {
     let inputValue = endorsmentInput.value 
     push(endorsementsInDB, inputValue)
-    appendItemsToEndorsements()
+    if (inputValue === "") {
+        return null
+    }else {
+        appendItemsToEndorsements()}
     clearInputValue()
 })
 
@@ -30,7 +33,6 @@ function appendItemsToEndorsements() {
     newList.innerHTML = itemValue
     endorsementListEl.append(newList)
 }
-
 // if (valueInput) {
 //     let newList = document.createElement("li")
 //     newList.textContent = valueInput
