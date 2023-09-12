@@ -19,9 +19,15 @@ endorsementBtn.addEventListener("click", function() {
         return false
     }
     push(endorsementsInDB, inputValue)
-        appendItemsToEndorsements()
-        clearInputValue()
+    appendItemsToEndorsements()
+    clearInputValue()
+    onValue(endorsementsInDB, function(snapshot) {
+        const data = snapshot.val()
+        endorsementsInDB(postElement, data)
+    })
 })
+
+
 
 function clearInputValue() {
     endorsmentInput.value = ""
