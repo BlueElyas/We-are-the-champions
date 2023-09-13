@@ -29,7 +29,7 @@ onValue(endorsementsInDB, (snapshot) => {
         Object.values(data).forEach((item) => {
             appendItemsToEndorsements(item);
         });
-    }
+    }})
 
 
 // function addEndorsementItems() {
