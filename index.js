@@ -6,7 +6,7 @@ let realtimeDatabase = {
 }
 
 const app = initializeApp(realtimeDatabase)
-const databaseEndorsmentForApp = getDatabase(app) 
+const databaseEndorsmentForApp = getDatabase(app)
 const endorsementsInDB = ref(databaseEndorsmentForApp, "endorsements")
 const endorsmentInput = document.getElementById("endorsement-element")
 const endorsementBtn = document.getElementById("push-for-endorsement")
@@ -14,7 +14,7 @@ let endorsementListEl = document.getElementById("endorsement-list")
 
 
 endorsementBtn.addEventListener("click", function() {
-    let inputValue = endorsmentInput.value.trim() 
+    let inputValue = endorsmentInput.value.trim()
     if (inputValue) {
         push(endorsementsInDB, inputValue)
         appendItemsToEndorsements()
@@ -22,17 +22,15 @@ endorsementBtn.addEventListener("click", function() {
     }
 })
 
-function addEndorsementItems() {
+endorsementListEl.addEventListener("load", function addEndorsementItems() {
     let dataValue = get.endorsementsInDB.child
     let datatList = document.createElement("li")
     let dataArray = Object.entries(dataValue)
     for (let i = 0; i < dataArray.length; i++) {
         datatList.innerHTML += dataArray
         endorsementListEl.append(datatList)
-    }
-}
-
-window.addEventListener("load", addEndorsementItems())
+}}
+)
 
 function clearInputValue() {
     endorsmentInput.value = ""
