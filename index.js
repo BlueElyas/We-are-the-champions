@@ -12,7 +12,6 @@ const endorsementInput = document.getElementById("endorsement-element")
 const endorsementBtn = document.getElementById("push-for-endorsement")
 let endorsementListEl = document.getElementById("endorsement-list")
 
-
 endorsementBtn.addEventListener("click", function() {
     let inputValue = endorsementInput.value.trim()
     if (inputValue) {
@@ -27,22 +26,11 @@ onValue(endorsementsInDB, (snapshot) => {
     console.log(data)
     if (data) {
         endorsementListEl.innerHTML = ''; // Clear the list
-        Object.values(data).forEach((item) => {
-            appendItemsToEndorsements(item);
-        });
-    }})
-
-
-// function addEndorsementItems() {
-//     let dataValue = get(endorsementListEl)
-//     console.log(dataValue)
-//     let datatList = document.createElement("li")
-//     let dataArray = Object.entries(dataValue)
-//     for (let i = 0; i < dataArray.length; i++) {
-//         datatList.innerHTML += dataArray
-//         endorsementListEl.append(datatList)
-// }}
-
+        for (const [key, value] of Object.entries(data)) {
+            if (value) { // Check if the value is not empty
+                appendItemsToEndorsements(value);
+            }
+        }}})
 
 function clearInputValue() {
     endorsementInput.value = ""
