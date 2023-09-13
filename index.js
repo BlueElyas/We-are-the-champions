@@ -22,24 +22,15 @@ endorsementBtn.addEventListener("click", function() {
     }
 })
 
-get(child(endorsementsInDB, "endorsements"), function keepElementOnPage(snapshot) {
-    let itemArray = Object.entries(endorsementBtn)
-    let itemID = snapshot[0]
-    let itemValue = snapshot[1]
-    if (snapshot.exists()) {
-        appendItemsToEndorsements(snapshot[1].val())
-    } else {
-        return false
+function addEndorsementItems() {
+    let dataValue = get.endorsementsInDB.child
+    let datatList = document.createElement("li")
+    let dataArray = Object.entries(dataValue)
+    for (let i = 0; i < dataArray.length; i++) {
+        datatList.innerHTML += dataArray
+        endorsementListEl.append(datatList)
     }
-
-})
-
-// onValue(endorsementsInDB, function(snapshot) {
-//     const data = snapshot.val()
-//     endorsementsInDB(postElement, data)
-// })
-
-
+}
 
 function clearInputValue() {
     endorsmentInput.value = ""
