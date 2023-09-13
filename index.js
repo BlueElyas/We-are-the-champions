@@ -22,16 +22,26 @@ endorsementBtn.addEventListener("click", function() {
     }
 })
 
-window.addEventListener("load", function addEndorsementItems() {
-    let dataValue = get.endorsementsInDB.child
-    console.log(dataValue)
-    let datatList = document.createElement("li")
-    let dataArray = Object.entries(dataValue)
-    for (let i = 0; i < dataArray.length; i++) {
-        datatList.innerHTML += dataArray
-        endorsementListEl.append(datatList)
-}}
-)
+onValue(endorsementsInDB, (snapshot) => {
+    const data = snapshot.val();
+    if (data) {
+        endorsementListEl.innerHTML = ''; // Clear the list
+        Object.values(data).forEach((item) => {
+            appendItemsToEndorsements(item);
+        });
+    }
+
+
+// function addEndorsementItems() {
+//     let dataValue = get(endorsementListEl)
+//     console.log(dataValue)
+//     let datatList = document.createElement("li")
+//     let dataArray = Object.entries(dataValue)
+//     for (let i = 0; i < dataArray.length; i++) {
+//         datatList.innerHTML += dataArray
+//         endorsementListEl.append(datatList)
+// }}
+
 
 function clearInputValue() {
     endorsementInput.value = ""
