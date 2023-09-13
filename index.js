@@ -22,11 +22,9 @@ endorsementBtn.addEventListener("click", function() {
 
 onValue(endorsementsInDB, (snapshot) => {
     const data = snapshot.val();
-    console.log(data)
     if (data) {
         endorsementListEl.innerHTML = ''; // Clear the list
         for (const [key, value] of Object.entries(data)) {
-            console.log(value)
             if (value) { // Check if the value is not empty
                 appendItemsToEndorsements(value);
             }
