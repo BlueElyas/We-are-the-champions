@@ -23,8 +23,11 @@ endorsementBtn.addEventListener("click", function() {
 })
 
 get(child(endorsementsInDB, "endorsements"), function keepElementOnPage(snapshot) {
+    let itemArray = Object.entries(endorsementBtn)
+    let itemID = snapshot[0]
+    let itemValue = snapshot[1]
     if (snapshot.exists()) {
-        appendItemsToEndorsements(snapshot.val())
+        appendItemsToEndorsements(snapshot[1].val())
     } else {
         return false
     }
