@@ -24,6 +24,7 @@ endorsementBtn.addEventListener("click", function() {
 
 onValue(endorsementsInDB, (snapshot) => {
     const data = snapshot.val();
+    console.log(data)
     if (data) {
         endorsementListEl.innerHTML = ''; // Clear the list
         Object.values(data).forEach((item) => {
