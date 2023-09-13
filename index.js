@@ -32,6 +32,8 @@ function addEndorsementItems() {
     }
 }
 
+window.addEventListener("load", addEndorsementItems())
+
 function clearInputValue() {
     endorsmentInput.value = ""
 }
