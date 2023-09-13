@@ -22,7 +22,7 @@ endorsementBtn.addEventListener("click", function() {
     }
 })
 
-window.endorsementListEl.addEventListener("load", function addEndorsementItems() {
+window.addEventListener("load", function addEndorsementItems() {
     let dataValue = get.endorsementsInDB.child
     console.log(dataValue)
     let datatList = document.createElement("li")
