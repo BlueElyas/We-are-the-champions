@@ -16,7 +16,6 @@ endorsementBtn.addEventListener("click", function() {
     let inputValue = endorsementInput.value.trim()
     if (inputValue) {
         push(endorsementsInDB, inputValue)
-        appendItemsToEndorsements(inputValue)
         clearInputValue()
     }
 })
